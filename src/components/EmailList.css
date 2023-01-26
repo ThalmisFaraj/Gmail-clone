@@ -1,0 +1,31 @@
+.emailList {
+  /* width: 80%; */
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow: scroll;
+  height: 100%;
+  /* for 'sticky'position to be applied, the height of parent needs to be set */
+}
+.emailList__settings {
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  border-top-left-radius: 0.8rem;
+  border-top-right-radius: 0.8rem;
+  border-bottom: 1px solid whitesmoke;
+  background-color: white;
+  z-index: 999;
+  /* width: 100%; */
+  padding: 1rem 0.625rem 1rem;
+}
+
+.emailList__sections {
+  display: flex;
+  border-bottom: 1.5px solid whitesmoke;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: white;
+}

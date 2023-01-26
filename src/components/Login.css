@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.login {
+  background-color: white;
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.login__header {
+  background-color: #f2f2f2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  padding: 0 4rem;
+  box-shadow: 1px 0 5px 2px rgb(223, 222, 222);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 0.1;
+}
+
+.login__header img {
+  width: 8rem;
+  object-fit: contain;
+}
+
+.login .MuiButtonBase-root:hover {
+  box-shadow: inset 0px 0 0 1px rgb(46, 4, 184);
+  background-color: #f2f2f2;
+  color: rgb(46, 4, 184);
+}
+
+.login__body {
+  display: flex;
+  width: inherit;
+  flex: 0.9;
+  background-color: white;
+}
+.login__body__left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 45%;
+  padding: 4rem;
+}
+.login__body__left h1 {
+  font-size: 4rem;
+  line-height: 1.2;
+  color: #202124;
+  font-family: "Google Sans", "Roboto", Arial, sans-serif;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+.login__body__left p {
+  margin-bottom: 1rem;
+  color: gray;
+  font-family: "Google Sans Text", "Roboto", Arial, sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.2;
+}
+
+.login__body__left .login__body__btn {
+  height: 3rem;
+  width: 50%;
+  /* margin: auto 0; */
+}
+.login__body__right {
+  width: 55%;
+  object-fit: contain;
+
+  display: grid;
+  place-items: center;
+}
+.login__body__right img {
+  width: 100%;
+  position: relative;
+  bottom: 0;
+}
+
+@media (max-width: 800px) {
+  .login__body {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .login__body__right,
+  .login__body__left {
+    width: 100%;
+  }
+
+  .login__body__left {
+    margin-top: 10%;
+  }
+
+  .login__body__right {
+    padding: 0 10%;
+  }
+}
+
+@media  (max-width: 1000px){
+.login__body__left h1{
+  font-size: 3rem;
+}
+
+}

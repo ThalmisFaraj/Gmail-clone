@@ -1,0 +1,77 @@
+.emailRow {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  /* added to fit the width of email row to 100% of available width */
+  background-color: white;
+  border-bottom: 1px solid rgb(177, 177, 177, 0.5);
+  height: 2.5rem;
+  cursor: pointer;
+}
+
+.emailRow:hover {
+  background-color: whitesmoke;
+  border-top: 1px solid rgb(177, 177, 177, 0.5);
+  box-shadow: 2px 2px 5px 3px rgb(138, 135, 135, 0.25);
+}
+
+.emailRow__icons {
+  display: flex;
+  flex: 0.15;
+  margin-right: 1rem;
+}
+
+.emailRow__details {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.emailRow__title {
+  justify-content: flex-start;
+  width: 25%;
+}
+
+.emailRow__title > h4 {
+  width: 150px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.emailRow__description {
+  display: flex;
+  align-items: center;
+  width: 50%;
+}
+
+.emailRow__description > h5 {
+  justify-content: flex-start;
+  max-width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 80%;
+}
+.emailRow__description > p {
+  color: rgb(0, 0, 0, 0.5);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.emailRow__time {
+  margin-left: auto;
+  margin-right: 0;
+}
+.emailRow__time > p {
+  font-weight: 500;
+  font-size: 0.825rem;
+}
+
+@media (max-width: 800px) {
+  .emailRow__description {
+    display: none;
+  }
+}

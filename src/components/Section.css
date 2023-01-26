@@ -1,0 +1,16 @@
+.section {
+  flex: 0.25;
+}
+
+.section__item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: gray;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.section__item:hover {
+  background-color: whitesmoke;
+}
