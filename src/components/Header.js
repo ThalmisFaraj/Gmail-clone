@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import "./Header.css";
 
 // =====MUI icons=====//
@@ -12,9 +11,6 @@ import NotificationsIcon from "@mui/icons-material/Notifications";
 
 import { openLogoutModal, closeLogoutModal } from "../features/userSlice";
 import { useDispatch, useSelector } from "react-redux";
-
-import { signOut } from "firebase/auth";
-import { auth } from "./firebase";
 
 function Header() {
   const dispatch = useDispatch();

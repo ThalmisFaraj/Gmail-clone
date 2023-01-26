@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "./Mail.css";
 
 // ===== MUI components =========
@@ -17,7 +17,6 @@ import MoreVertIcon from "@mui/icons-material/MoreVert";
 import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import KeyboardIcon from "@mui/icons-material/Keyboard";
-import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 
 import IconButton from "@mui/material/IconButton";
 import { useNavigate } from "react-router-dom";
