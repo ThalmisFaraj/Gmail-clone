@@ -1,4 +1,5 @@
 import "./Header.css";
+import React from "react";
 
 // =====MUI icons=====//
 // ===================//
@@ -12,7 +13,7 @@ import NotificationsIcon from "@mui/icons-material/Notifications";
 import { openLogoutModal, closeLogoutModal } from "../features/userSlice";
 import { useDispatch, useSelector } from "react-redux";
 
-function Header() {
+const Header = () => {
   const dispatch = useDispatch();
 
   const user = useSelector((state) => state.user.userStatus);
@@ -26,7 +27,7 @@ function Header() {
 
   return (
     <div className="header">
-      <div className="header__left">
+      <div className="header__left ">
         <IconButton>
           <MenuIcon />
         </IconButton>
@@ -54,6 +55,6 @@ function Header() {
       </div>
     </div>
   );
-}
+};
 
 export default Header;

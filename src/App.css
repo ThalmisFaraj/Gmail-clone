@@ -1,5 +1,38 @@
 .app {
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app__body {
+  display: grid;
+  grid-template-rows: 100%;
+  grid-template-columns: 15% 85%;
+}
+
+@media (max-width: 768px) {
+  .app__body {
+    display: grid;
+    grid-template-rows: 100%;
+    grid-template-columns: 25% 75%;
+  }
+}
+/*
+.app__body__sidebar {
+  /* display: flex; */
+
+/* background-color: white; */
+/* padding: 0 1rem; */
+/* height: 100vh; */
+/* box-shadow: 1px 1px 5px 3px rgb(223, 220, 220); */
+
+/* .app__body__emails {
+  width: 80%;
+} */
+
+/* ==================== */
+/* .app {
+  height: 100vh;
 }
 
 .app__body {
@@ -12,4 +45,4 @@
 
 .app__body__emails {
   width: 80%;
-}
+} */

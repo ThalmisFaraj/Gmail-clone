@@ -1,4 +1,5 @@
 import React from "react";
+import ReactDom from "react-dom";
 import "./Sidebar.css";
 // ====Components ===========
 import SidebarOptions from "./SidebarOptions";
@@ -17,7 +18,8 @@ import { NavLink } from "react-router-dom";
 // import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 
-export default function Sidebar({ composeMail }) {
+const Sidebar = (props) => {
+  const { composeMail } = props;
   const countOfInbox = useSelector((state) => state.mail.inbox);
   const countOfStarred = useSelector((state) => state.mail.starred);
   const countOfImportant = useSelector((state) => state.mail.important);
@@ -66,4 +68,6 @@ export default function Sidebar({ composeMail }) {
       </div>
     </div>
   );
-}
+};
+
+export default Sidebar;

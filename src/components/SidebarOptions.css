@@ -16,7 +16,8 @@
 
 /* ===== MUI Icons ========== */
 .sidebar__options > .MuiSvgIcon-root {
-  padding: 0.3125rem; /* 5px */
+  width: 1.25rem;
+  /* 5px */
 }
 
 .sidebar__options > p {
@@ -56,4 +57,10 @@
 }
 .active h3 {
   font-weight: bold;
+}
+
+@media (max-width: 500px) {
+  .sidebar__options {
+    margin-top: 0.5rem;
+  }
 }

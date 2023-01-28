@@ -34,7 +34,8 @@
 }
 
 .emailRow__title > h4 {
-  width: 150px;
+  width: 100%;
+  /* max-width: 150px; */
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -70,8 +71,21 @@
   font-size: 0.825rem;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 768px) {
   .emailRow__description {
     display: none;
+  }
+}
+@media (max-width: 450px) {
+  .emailRow__icons {
+    display: flex;
+    /* flex: 0.05; */
+    margin-right: 0.5rem;
+  }
+  .emailRow__icons > * {
+    margin: 0;
+  }
+  .emailRow__title {
+    width: 35%;
   }
 }

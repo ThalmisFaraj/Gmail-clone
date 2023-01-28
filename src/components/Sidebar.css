@@ -21,9 +21,11 @@
 .sidebar {
   display: flex;
   flex-direction: column;
-  padding-right: 3rem;
-  flex: 0.2;
+  padding-right: 1rem;
+  /* width: 50%; */
   max-width: 250px;
+  /* height: 100vh; */
+  /* box-shadow: 1px 3px 3px 2px #b8b5b5; */
 }
 
 .sidebar__options__container {
