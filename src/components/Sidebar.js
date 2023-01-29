@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDom from "react-dom";
+// import ReactDom from "react-dom";
 import "./Sidebar.css";
 // ====Components ===========
 import SidebarOptions from "./SidebarOptions";
