@@ -3,6 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   userStatus: null,
   logoutModalIsOpen: false,
+  isMobileView: false,
 };
 
 export const userSlice = createSlice({
@@ -23,10 +24,22 @@ export const userSlice = createSlice({
     closeLogoutModal: (state) => {
       state.logoutModalIsOpen = false;
     },
+    adjustToMobileView: (state) => {
+      state.isMobileView = true;
+    },
+    adjustToEnlargedView: (state) => {
+      state.isMobileView = false;
+    },
   },
 });
 
-export const { login, logout, closeLogoutModal, openLogoutModal } =
-  userSlice.actions;
+export const {
+  login,
+  logout,
+  closeLogoutModal,
+  openLogoutModal,
+  adjustToMobileView,
+  adjustToEnlargedView,
+} = userSlice.actions;
 
 export default userSlice.reducer;

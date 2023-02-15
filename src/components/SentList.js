@@ -29,11 +29,19 @@ function SentList() {
     const q = query(collection(db, "sent"), orderBy("time", "desc"));
     const unsubscribe = onSnapshot(q, (snapshot) => {
       let items = [];
+      if (!snapshot) return;
       snapshot.forEach((doc) => items.push({ id: doc.id, ...doc.data() }));
       setData(items);
       const mailCount = items.length;
       dispatch(countSent(mailCount));
     });
+    // const unsubscribe = onSnapshot(q, (snapshot) => {
+    //   let items = [];
+    //   snapshot.forEach((doc) => items.push({ id: doc.id, ...doc.data() }));
+    //   setData(items);
+    //   const mailCount = items.length;
+    //   dispatch(countSent(mailCount));
+    // });
 
     return () => unsubscribe();
   }, [dispatch]);

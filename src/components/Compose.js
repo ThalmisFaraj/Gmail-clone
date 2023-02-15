@@ -122,24 +122,23 @@ function Compose({ closeComposeModal }) {
             <textarea {...register("content")} id="content" />
           </form>
           <div className="compose__btns">
-            <IconButton onClick={handleSubmit(sendMail)}>
-              <Button
-                type="submit"
-                variant="contained"
-                sx={{ backgroundColor: "#3b558c", color: "white" }}
-              >
-                Send
-              </Button>
-            </IconButton>
-            <IconButton onClick={handleSubmit(saveAsDraft)}>
-              <Button
-                type="submit"
-                variant="contained"
-                sx={{ backgroundColor: "#3b558c", color: "white" }}
-              >
-                Save as Draft
-              </Button>
-            </IconButton>
+            <Button
+              type="submit"
+              variant="contained"
+              sx={{ backgroundColor: "#3b558c", color: "white" }}
+              onClick={handleSubmit(sendMail)}
+            >
+              Send
+            </Button>
+
+            <Button
+              type="submit"
+              variant="contained"
+              sx={{ backgroundColor: "#3b558c", color: "white" }}
+              onClick={handleSubmit(saveAsDraft)}
+            >
+              Save as Draft
+            </Button>
           </div>
         </div>
       )}

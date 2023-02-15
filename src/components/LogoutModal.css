@@ -25,3 +25,10 @@
   height: 5rem;
   width: 5rem;
 }
+
+@media (max-width: 768px) {
+  .logout__modal {
+    width: max-content;
+    height: max-content;
+  }
+}

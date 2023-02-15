@@ -13,7 +13,8 @@ import NotificationsIcon from "@mui/icons-material/Notifications";
 import { openLogoutModal, closeLogoutModal } from "../features/userSlice";
 import { useDispatch, useSelector } from "react-redux";
 
-const Header = () => {
+const Header = (props) => {
+  const { mobileView, toggleSidebar } = props;
   const dispatch = useDispatch();
 
   const user = useSelector((state) => state.user.userStatus);
@@ -27,10 +28,12 @@ const Header = () => {
 
   return (
     <div className="header">
-      <div className="header__left ">
-        <IconButton>
-          <MenuIcon />
-        </IconButton>
+      <div className="header__left " onClick={() => toggleSidebar()}>
+        {mobileView && (
+          <IconButton>
+            <MenuIcon />
+          </IconButton>
+        )}
         <img
           src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Gmail_icon_%282020%29.svg/512px-Gmail_icon_%282020%29.svg.png?20221017173631"
           alt="gmail logo"
@@ -43,12 +46,16 @@ const Header = () => {
         <ArrowDropDownIcon />
       </div>
       <div className="header__right">
-        <IconButton>
-          <AppsIcon />
-        </IconButton>
-        <IconButton>
-          <NotificationsIcon />
-        </IconButton>
+        {!mobileView && (
+          <>
+            <IconButton>
+              <AppsIcon />
+            </IconButton>
+            <IconButton>
+              <NotificationsIcon />
+            </IconButton>
+          </>
+        )}
         <IconButton onClick={logoutModal}>
           <Avatar src={user?.photoUrl} />
         </IconButton>

@@ -1,13 +1,24 @@
 import React from "react";
 import "./SidebarOptions.css";
 
-function SidebarOptions({ Icon, title, number, selected, onClick }) {
+function SidebarOptions({
+  Icon,
+  title,
+  number,
+  selected,
+  onClick,
+  showSidebar,
+}) {
   return (
-    <div className="sidebar__options" onClick={onClick}>
-      <Icon />
-      <h3>{title}</h3>
-      <p>{number}</p>
-    </div>
+    <>
+      {
+        <div className="sidebar__options" onClick={onClick}>
+          <Icon />
+          <h3>{title}</h3>
+          <p>{number}</p>
+        </div>
+      }
+    </>
   );
 }
 
